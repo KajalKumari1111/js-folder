@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript </title>
+
+    <script>
+			
+        
+        function grade()
+        {
+            var marks = document.getElementById("marks").value;	
+            switch(true)
+            {
+                case (marks>90):
+                    alert("grade is A");
+                    break; 
+                case (marks>80 && marks<=90):
+                    alert("grade is B");
+                    break; 
+                case (marks>70 && marks<=80):
+                    alert("grade is C");
+                    break;    
+                case (marks>60 && marks<=70):
+                    alert("grade is D");
+                    break;
+                default:
+                    alert("improvement required");
+            }
+        }
+
+       
+            
+    </script>
+  
+</head>
+<body align="center">
+    <input type="number" id="marks" value="Enter your marks" /> 
+    <br/>
+    <br/>
+    <input class="grade" type="button" value="calculate" onClick="grade()"/> 
+    <br/>
+   
+
+    
+</body>
+</html>
+

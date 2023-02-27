@@ -1,0 +1,34 @@
+<!-- //onchange, onclick, onmouseover, onmouseout, onkeydown, onload, onsubmit, onreset, onfocus, onblur. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunction(x){
+            x.style.background="yellow";
+        }
+        function myFunction1(x){
+            x.style.background="pink";
+        }
+        function myFunction2(x){
+            x.style.color="blue";
+        }
+        function myFunction3(){
+            document.getElementById("demo").innerHTML="You selected some text";
+        }
+        function myFunction4(x){
+            x.style.background="orange";
+        }
+    </script>
+</head>
+<body>
+    <!-- enter your name:<input type="text" onfocus="myFunction(this)" onblur="myFunction1(this)" onmouseover="myFunction2(this)"> -->
+    enter your name:<input type="text" onselect="myFunction3(this)" onmouseover="myFunction2(this)" onmouseout="myFunction4(this)">
+    <p id="demo"></p>
+    <!-- <p>when the input field gets focus, a function trigged</p> -->
+</body>
+</html>

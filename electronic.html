@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+         function a1()
+        {
+            document.getElementById("itemName").value;		
+            
+        }
+
+        function onCalculate(){
+            var price = document.getElementById("price").value;	
+            var quantity = document.getElementById("quantity").value;	
+            if(document.getElementById("checked").checked == true)
+            {
+                var bill = parseInt((price*quantity)+0.13);
+                alert(`your bill with vat is ${bill}`);
+            }
+            else
+            {
+                var bill = parseInt(price*quantity);
+                alert(`your bill without vat is ${bill}`);
+            }
+        }
+    </script>
+    <style>
+        body{
+            text-align: center;
+            margin: 50px 200px 50px 200px;
+        }
+        input{
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(246, 173, 64, 0.928);
+        }
+        h1{
+            color: rgb(176, 126, 223);
+        }
+        .container{
+            border: 2px solid black;
+            text-align: center;
+            padding: 20px 0px 20px 0px;
+            background-color: rgb(255, 255, 255);
+        }
+        #checked{
+            margin-right: 120px;
+            margin-top: 20px;
+        }
+        h6{
+            margin-top: -22px;
+        }
+        button{
+            border: 1px solid rgb(56, 152, 185);
+            padding: 10px 50px 10px 50px;
+            border-radius: 10px;
+            background-color: rgb(72, 191, 250);
+            font-size: 15px;
+            color: white;
+        }
+        button:hover{
+            border-color: rgb(36, 100, 156);
+            background-color: rgb(86, 142, 216);
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h1> Calculate Bill</h1>
+    <form>
+
+        <input type="text"  id="itemName"value="itemName" placeholder="Enter the Electronic Item name" onlick="a1()"><br>
+        <input type="number" id="price" value="price" placeholder="Enter the price of electronic item"><br>
+        <input type="number" id="quantity" value="quantity" placeholder="Enter the quatity of item you want"><br>
+        <input type="checkbox" id="checked" value="checked"><h6>VAT applicable</h6>
+        <button type="submit" value="calculate" onclick="onCalculate()">Calculate</button>
+    </form>
+   </div>
+</body>
+</html>

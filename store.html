@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function store()
+        {
+            var userValue = parseInt(prompt("Enter the values and to exit enter -1"));
+            var arr = [];
+            var sum = 0;
+            let max = arr[0];
+            var i=0;
+       
+            while(userValue!==-1)
+            {
+
+                arr[i] = userValue;
+                sum = sum+arr[i];
+                if(max<arr[i+1])
+                {
+                  max = arr[i+1];
+                }
+                i++;
+                userValue = parseInt(prompt("Enter the values and to exit enter -1"));
+            
+            }
+            var diff = sum-max;
+            confirm(arr.length-1);
+            if(confirm == true)
+            {
+                arr.pop();
+                console.log("successully deleted last element");
+            }
+            else
+            {
+                arr.unshift();
+                console.log("success deleted first element");
+            }
+            arr.sort(function(a, b){
+                return (a-b)
+            });
+            console.log(arr);
+        }
+       
+       
+    </script>
+</head>
+
+<body>
+    <button id="store" onClick="store()">Store</button>
+</body>
+</html>

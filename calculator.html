@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript calculator</title>
+
+    <script>
+			
+        function a1()
+        {
+            document.getElementById("first").value = " ";		
+            
+        }
+
+        function a2()
+        {
+            document.getElementById("second").value = " ";		
+        }
+        function add()
+        {
+            var a = document.getElementById("first").value;	
+            var b = document.getElementById("second").value;
+            document.getElementById("third").value	= parseInt(a)+ parseInt(b);
+        }
+
+
+        function subtract()
+        {
+            var a = document.getElementById("first").value;	
+            var b = document.getElementById("second").value;
+            document.getElementById("third").value	= parseInt(a)-parseInt(b);
+        }
+        function multiply()
+        {
+            var a = document.getElementById("first").value;	
+            var b = document.getElementById("second").value;
+            document.getElementById("third").value	= parseInt(a)* parseInt(b);
+        }
+        function divide()
+        {
+            var a = document.getElementById("first").value;	
+            var b = document.getElementById("second").value;
+            document.getElementById("third").value	= parseInt(a)/ parseInt(b);
+        }
+        function fact()
+        {
+            var x= document.getElementById("first").value;
+            var fact=1;
+            while(x>=1)
+            { 
+                fact=fact*x;
+                x--;
+            }
+            document.getElementById("third").value= fact;
+        }
+        function concat()
+        {
+            var a = document.getElementById("first").value;	
+            var b = document.getElementById("second").value;
+            var c = document.getElementById("third").value;	
+            alert(a+b);
+        }
+            
+    </script>
+   <style>
+    .add{
+        background-color: rgb(181, 135, 225);
+        border-color: black;
+        
+    }
+   </style>
+</head>
+<body align="center">
+    <input type="text" id="first" value="Enter your first Number" onClick="a1()"/> 
+    <br/>
+    <input type="text" id="second" value="Enter your second Number" onClick="a2()"/> 
+    <br/>
+    <input type="text" id="third" placeholder="result"/>  
+    <br/>
+    <input class="add" type="button" value="ADD" onClick="add()"/> 
+    <br/>
+    <input class="add" type="button" value="SUBTRACT" onClick="subtract()"/> 
+    <br/>
+    <input class="add" type="button" value="MULTIPLY" onClick="multiply()"/> 
+    <br/>
+    <input class="add" type="button" value="DIVIDE" onClick="divide()"/> 
+    <br/>
+    <input class="add" type="button" value="FACTORIAL" onClick="fact()"/> 
+    <br/>
+    <input class="add" type="button" value="CONCATENATE" onClick="concat()"/> 
+
+    
+</body>
+</html>
+

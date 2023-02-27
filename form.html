@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script>
+         function personName()
+        {
+            document.getElementById("name").value = " ";		
+            
+        }
+
+        function passsword()
+        {
+            document.getElementById("password").value = " ";		
+        }
+        function confirmPasssword()
+        {
+            document.getElementById("confirmPassword").value = " ";		
+        }
+        function age()
+        {
+            document.getElementById("age").value = " ";		
+        }
+         function phoneNo()
+        {
+            document.getElementById("phoneno").value = " ";		
+        }
+          
+
+        function submitForm()
+        {
+            var name = document.getElementById("name").value;
+            var passsword = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var age = document.getElementById("age").value;
+            var phoneno = document.getElementById("phoneno").value;
+            var textArea = document.getElementById("textarea").value;
+            if(name.length<=5)
+            {
+                alert("charater should be more than 5");
+            }
+            if((passsword != confirmPassword))
+            {
+               alert("password and confirm password is not eqaul");
+            }
+            else if(passsword.length!=8)
+            {
+                alert("passsword length is is not equal to 8" );
+            }
+           
+            if(age<24)
+            {
+                alert("age should be more than 24" );
+            }
+            if(phoneno.length < 10)
+            {
+                alert("phone number should be of 10 digits");
+            }
+            else if(phoneno[0]!=9)
+            {
+                alert("phone number should start with 9");
+            }
+           
+            if(textArea == "")
+            {
+                alert("address can not be empty");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form  method="get">
+       <input type="text" id="name" value="Name"  onclick="personName()"><br>
+       <input type="password" id="password" value="passsword"  onclick="passsword()"><br>
+       <input type="password" id="confirmPassword" value="confirmPassword" onclick="confirmPasssword()" ><br>
+       <input type="number" id="age" value="age" placeholder="enter age"onclick="age()" ><br>
+       <input type="number" id="phoneno" value="phoneno" placeholder="phone no" onclick="phoneNo()" ><br>
+       <textarea rows="10" cols="20" id="textarea"  placeholder="enter your address"></textarea><br>
+       <button type="submit" value="submit" onclick="submitForm()">Submit</button>
+    
+    
+    </form>
+    
+    
+    
+    
+
+</body>
+</html>
